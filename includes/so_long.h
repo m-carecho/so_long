@@ -6,7 +6,7 @@
 /*   By: mcarecho <mcarecho@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 19:29:27 by mcarecho          #+#    #+#             */
-/*   Updated: 2022/04/21 18:53:01 by mcarecho         ###   ########.fr       */
+/*   Updated: 2022/07/15 19:07:16 by mcarecho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ typedef struct s_game
 // --------------------------- PROTOTYPES ------------------------------------ |
 
 void input_print_error(char *msg, t_game* game);
-void  read_map(int argc, char **argv, t_game* game);
+void read_map(int argc, char **argv, t_game* game);
 void error_free(char *msg, t_game* game, char* str);
 void start_game(t_game* game);
 void print_map(t_game* game);

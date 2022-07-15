@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/milena/42/so_long'
+gcc -L./libft -I./libft    -I ./includes -I ./libft -Wall -Wextra -Werror  ./src/*.c -o so_long -L ./libft -lft -L./minilibx -lmlx_Linux -L/usr/lib -I minilibx -Imlx_linux -lXext -lX11 -lm -lz -g3
+make: Leaving directory '/home/milena/42/so_long'
+ 
