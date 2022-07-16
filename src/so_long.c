@@ -6,7 +6,7 @@
 /*   By: mcarecho <mcarecho@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 20:13:01 by mcarecho          #+#    #+#             */
-/*   Updated: 2022/04/21 18:53:27 by mcarecho         ###   ########.fr       */
+/*   Updated: 2022/07/15 23:32:45 by mcarecho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ static void init_struct(t_game* game)
   game->map->map = NULL;
   game->map->max_x = 0;
   game->map->max_y = 0;
-  game->map->x_len = 0;
-  game->map->y_len = 0;
+  game->map->x_temp = 0;
+  game->map->y_temp = 0;
+  game->map->tmp = NULL;
   game->collectible = 0;
   game->exit = 0;
   game->player->x_player = 0;

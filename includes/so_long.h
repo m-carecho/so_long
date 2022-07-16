@@ -6,7 +6,7 @@
 /*   By: mcarecho <mcarecho@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 19:29:27 by mcarecho          #+#    #+#             */
-/*   Updated: 2022/07/15 19:07:16 by mcarecho         ###   ########.fr       */
+/*   Updated: 2022/07/15 23:29:44 by mcarecho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ typedef struct s_map
   char **map;
   int max_y;
   int max_x;
-  int x_len;
-  int y_len;
+  int x_temp;
+  int y_temp;
+  char *tmp;
   
 }			t_map;
 
@@ -80,6 +81,7 @@ void read_map(int argc, char **argv, t_game* game);
 void error_free(char *msg, t_game* game, char* str);
 void start_game(t_game* game);
 void print_map(t_game* game);
+void free_ptr(void** str);
 
 
 #endif
