@@ -3,28 +3,28 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mcarecho <mcarecho@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: user42 <user42@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/15 19:37:06 by mcarecho          #+#    #+#              #
-#    Updated: 2022/07/15 23:59:34 by mcarecho         ###   ########.fr        #
+#    Updated: 2022/07/16 05:34:00 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME		=		so_long
 
-CC			=		gcc -L./libft -I./libft   
+CC			=		clang
 
 CFLAGS		=		-Wall -Wextra -Werror 
 
-LIBFT			=		./libft/libft.a
+LIBFT		=		./libft/libft.a
 
 SRCS =  ./src/*.c
 
 all:$(NAME)
 
 $(NAME): $(LIBFT)
-	${CC} -I ./includes -I ./libft ${CFLAGS} ${SRCS} -o ${NAME} -L ./libft -lft -L./minilibx -lmlx_Linux -L/usr/lib -I minilibx -Imlx_linux -lXext -lX11 -lm -lz -g3 -fsanitize=address
+	${CC} -I ./includes ${CFLAGS} ${SRCS} -o ${NAME} -I . -g3 -Lmlx_Linux -lmlx_Linux -L ./minilibx -Imlx_Linux -L ./libft -lft -lXext -lX11 -lm -lz -I ./libft
 
 $(LIBFT): 
 	make bonus -C ./libft

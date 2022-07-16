@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarecho <mcarecho@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 17:56:20 by mcarecho          #+#    #+#             */
-/*   Updated: 2022/04/21 18:28:52 by mcarecho         ###   ########.fr       */
+/*   Updated: 2022/07/16 05:25:31 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ void start_game(t_game* game)
   if(game->win == NULL)
     input_print_error("Could not open the window", game);
   load_image(game);
+  mlx_loop(game->mlx);
 }
